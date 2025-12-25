@@ -1,5 +1,25 @@
 # ⌨️ Cursor Auto-Return Agent
 
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![GitHub stars](https://img.shields.io/github/stars/yksanjo/cursor-auto-return-agent?style=social)
+
+
+## 📸 Screenshots
+
+### Main Dashboard
+![Dashboard](screenshots/dashboard.png)
+*Main interface and key features*
+
+### Additional Views
+![Features](screenshots/features.png)
+*Additional functionality and views*
+
+> **Note**: Screenshots will be added to the `screenshots/` directory. To add your own:
+> 1. Take screenshots of your application
+> 2. Save them in a `screenshots/` folder  
+> 3. Update the image paths above
+
+
 Automatically presses Command+Return (⌘+Enter) in Cursor IDE. Useful for triggering AI completions or other automated actions.
 
 ## Features
