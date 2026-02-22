@@ -1,108 +1,84 @@
-# ⌨️ Cursor Auto-Return Agent
+# cursor-auto-return-agent
 
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![GitHub stars](https://img.shields.io/github/stars/yksanjo/cursor-auto-return-agent?style=social)
+## Detailed Description
 
+cursor-auto-return-agent is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-## 📸 Screenshots
+## Problem Statement
 
-### Main Dashboard
-![Dashboard](screenshots/dashboard.png)
-*Main interface and key features*
+Describe the user or business problem this project solves, the target users, and expected outcomes.
 
-### Additional Views
-![Features](screenshots/features.png)
-*Additional functionality and views*
+## Solution Overview
 
-> **Note**: Screenshots will be added to the `screenshots/` directory. To add your own:
-> 1. Take screenshots of your application
-> 2. Save them in a `screenshots/` folder  
-> 3. Update the image paths above
+Summarize the architecture, core modules, and runtime behavior at a high level.
 
+## Key Features
 
-Automatically presses Command+Return (⌘+Enter) in Cursor IDE. Useful for triggering AI completions or other automated actions.
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
 
-## Features
+## Repository Structure
 
-- ✅ Automatically presses Command+Return at configurable intervals
-- ✅ Configurable press count (infinite or limited)
-- ✅ Safe keyboard control with proper key release
-- ✅ macOS optimized (uses pynput)
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
 
-## Installation
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
 
 ```bash
-cd cursor-auto-return-agent
-pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt  # or: pip install -e .[dev]
+pytest
 ```
 
 ## Usage
 
-### Basic Usage (Infinite Presses)
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-```bash
-python3 cursor_auto_return.py
-```
+## Quality Standards
 
-This will press Command+Return every 2 seconds indefinitely. Press Ctrl+C to stop.
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-### Limited Presses
+## Security
 
-```bash
-python3 cursor_auto_return.py --max-presses 10
-```
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-Press Command+Return 10 times, then stop.
+## Contributing
 
-### Custom Interval
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-```bash
-python3 cursor_auto_return.py --interval 1.5
-```
+## Roadmap
 
-Press every 1.5 seconds.
+Track upcoming milestones, technical debt, and planned feature work.
 
-### Custom Delay Before Starting
+## Support
 
-```bash
-python3 cursor_auto_return.py --delay 5
-```
-
-Wait 5 seconds before starting (gives you time to focus Cursor window).
-
-## Examples
-
-```bash
-# Quick presses: 20 times, every 1 second
-python3 cursor_auto_return.py --max-presses 20 --interval 1
-
-# Slow presses: every 5 seconds, infinite
-python3 cursor_auto_return.py --interval 5
-
-# Custom: 5 presses, 3 second interval, 5 second delay
-python3 cursor_auto_return.py --max-presses 5 --interval 3 --delay 5
-```
-
-## How It Works
-
-1. The agent uses `pynput` to simulate keyboard input
-2. It presses Command (⌘) + Return (Enter) simultaneously
-3. Waits for the specified interval
-4. Repeats until stopped or max presses reached
-
-## Safety
-
-- Always test with a small `--max-presses` first
-- Make sure Cursor is focused before starting
-- Use Ctrl+C to stop immediately if needed
-
-## Requirements
-
-- Python 3.7+
-- macOS (for best results)
-- pynput library
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT
-
+This project is released under the MIT License.
